@@ -1,0 +1,31 @@
+{
+  "title": "Grand Hotel Budapest",
+  "description": "A luxurious hotel in the heart of Budapest",
+  "guestCount": 4,
+  "bedroomCount": 2,
+  "bathroomCount": 2,
+  "amenities": [
+    "wifi",
+    "pool"
+  ],
+  "host": {
+    "name": "John Doe",
+    "email": "john@example.com",
+    "phone": "1234567890"
+  },
+  "address": {
+    "street": "123 Main St",
+    "city": "Budapest",
+    "state": "Budapest",
+    "country": "Hungary",
+    "zipCode": "12345"
+  },
+  "location": {
+    "latitude": 47.4979,
+    "longitude": 19.0402
+  },
+  "rooms": [],
+  "id": "1731404079863",
+  "slug": "grand-hotel-budapest",
+  "images": []
+}

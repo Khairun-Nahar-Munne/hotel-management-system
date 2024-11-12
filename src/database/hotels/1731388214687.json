@@ -1,0 +1,43 @@
+{
+  "title": "Mountain View Resort",
+  "description": "Luxury resort with stunning mountain views",
+  "guestCount": 4,
+  "bedroomCount": 2,
+  "bathroomCount": 2,
+  "amenities": [
+    "wifi",
+    "pool",
+    "spa"
+  ],
+  "host": {
+    "name": "John Doe",
+    "email": "john@example.com",
+    "phone": "123-456-7890"
+  },
+  "address": {
+    "street": "123 Beach Road",
+    "city": "Miami",
+    "state": "FL",
+    "country": "USA",
+    "zipCode": "33139"
+  },
+  "location": {
+    "latitude": 25.7617,
+    "longitude": -80.1918
+  },
+  "rooms": [
+    {
+      "hotelSlug": "luxury-beach-resort",
+      "roomSlug": "ocean-view-suite",
+      "roomImage": "/images/img1.jpg",
+      "roomTitle": "Ocean View Suite",
+      "bedroomCount": 4
+    }
+  ],
+  "id": "1731388214687",
+  "slug": "luxury-resort",
+  "images": [
+    "/uploads/images/1731388798407.jpg",
+    "/uploads/images/1731388798409.jpg"
+  ]
+}

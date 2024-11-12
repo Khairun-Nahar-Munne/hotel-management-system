@@ -1,0 +1,37 @@
+{
+  "title": "Grand Plaza Hotel & Suites",
+  "description": "A luxurious 5-star hotel in the heart of Manhattan",
+  "guestCount": 6,
+  "bedroomCount": 3,
+  "bathroomCount": 3,
+  "amenities": [
+    "Free High-Speed WiFi",
+    "Infinity Pool",
+    "Luxury Spa",
+    "Modern Gym",
+    "Michelin Star Restaurant",
+    "24/7 Concierge",
+    "Valet Parking",
+    "Executive Business Center"
+  ],
+  "host": {
+    "name": "John Smith",
+    "email": "john.smith@grandplaza.com",
+    "phone": "+1-555-123-4567"
+  },
+  "address": {
+    "street": "123 Luxury Avenue",
+    "city": "New York",
+    "state": "NY",
+    "country": "USA",
+    "zipCode": "10001"
+  },
+  "location": {
+    "latitude": 40.7128,
+    "longitude": -74.006
+  },
+  "id": "1731416516744",
+  "slug": "luxury-suites",
+  "images": [],
+  "rooms": []
+}

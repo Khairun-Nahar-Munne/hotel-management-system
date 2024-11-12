@@ -1,0 +1,86 @@
+
+//post
+
+curl -X POST http://localhost:3000/api/hotels \
+  -H "Content-Type: application/json" \
+  -d '{
+    "title": "Luxury Suites",
+    "description": "A luxury hotel with world-class amenities",
+    "guestCount": 2,
+    "bedroomCount": 1,
+    "bathroomCount": 1,
+    "amenities": ["pool", "gym", "restaurant", "spa"],
+    "host": {
+      "name": "Jane Smith",
+      "email": "jane.smith@example.com",
+      "phone": "987-654-3210"
+    },
+    "address": {
+      "street": "456 Elite Rd",
+      "city": "Prestige City",
+      "state": "Prime State",
+      "country": "Exotic Country",
+      "zipCode": "67890"
+    },
+    "location": {
+      "latitude": 23.45,
+      "longitude": 67.89
+    }
+  }'
+
+# Get by ID
+curl http://localhost:3000/api/hotel/1699840000000
+
+# Get by slug
+curl http://localhost:3000/api/hotels/slug/mountain-view-hotel
+
+#put by ID
+
+curl -X PUT http://localhost:3000/api/hotels/1731416516744 \
+  -H "Content-Type: application/json" \
+  -d '{
+    "title": "Grand Plaza Hotel & Suites",
+    "description": "A luxurious 5-star hotel in the heart of Manhattan",
+    "guestCount": 6,
+    "bedroomCount": 3,
+    "bathroomCount": 3,
+    "amenities": [
+      "Free High-Speed WiFi",
+      "Infinity Pool",
+      "Luxury Spa",
+      "Modern Gym",
+      "Michelin Star Restaurant",
+      "24/7 Concierge",
+      "Valet Parking",
+      "Executive Business Center"
+    ],
+    "host": {
+      "name": "John Smith",
+      "email": "john.smith@grandplaza.com",
+      "phone": "+1-555-123-4567"
+    },
+    "address": {
+      "street": "123 Luxury Avenue",
+      "city": "New York",
+      "state": "NY",
+      "country": "USA",
+      "zipCode": "10001"
+    },
+    "location": {
+      "latitude": 40.7128,
+      "longitude": -74.0060
+    }
+  }'
++
+
+
+//for post images
+      curl -X POST http://localhost:3000/api/hotels/1731414488981/images \
+  -F "images=@/home/w3e60/Documents/w3_assignment1/images/img1.jpg" \
+  -F "images=@/home/w3e60/Documents/w3_assignment1/images/img2.jpg" \
+  -F "images=@/home/w3e60/Documents/w3_assignment1/images/img3.jpg" \
+  -F "images=@/home/w3e60/Documents/w3_assignment1/images/img4.jpg"
+
+
+  //for upload room image:
+  curl -X POST http://localhost:3000/api/hotels/sample-hotel/rooms/deluxe-suite/image   -F "image=@//home/w3e60/Docusignment1/images/img1.jpg"
