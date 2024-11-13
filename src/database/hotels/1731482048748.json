@@ -1,0 +1,31 @@
+{
+  "title": "Test Hotel",
+  "description": "This is a test hotel",
+  "guestCount": 4,
+  "bedroomCount": 2,
+  "bathroomCount": 2,
+  "amenities": [
+    "WiFi",
+    "Air Conditioning"
+  ],
+  "host": {
+    "name": "John Doe",
+    "email": "john@example.com",
+    "phone": "1234567890"
+  },
+  "address": {
+    "street": "123 Main St",
+    "city": "Anytown",
+    "state": "CA",
+    "country": "USA",
+    "zipCode": "12345"
+  },
+  "location": {
+    "latitude": 37.7749,
+    "longitude": -122.4194
+  },
+  "id": "1731482048748",
+  "slug": "test-hotel",
+  "images": [],
+  "rooms": []
+}
