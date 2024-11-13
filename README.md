@@ -57,7 +57,7 @@ Follow these instructions to set up the project locally for development and test
 
 ### Project Setup
 
-#### Prerequisites
+#### Pre-requisites
 
 - Node.js (v14 or higher)
 - npm (v6 or higher)
@@ -120,7 +120,7 @@ Follow these instructions to set up the project locally for development and test
 #### POST Hotel Data:
 
 ```bash
-- curl -X POST http://localhost:3000/api/hotels \
+curl -X POST http://localhost:3000/api/hotels \
   -H "Content-Type: application/json" \
   -d '{
     "title": "Luxury Suites",
@@ -151,18 +151,18 @@ Follow these instructions to set up the project locally for development and test
 #### GET Hotel Data by Unique-ID
 
 ```bash
-- curl http://localhost:3000/api/hotels/1731479202985
+curl http://localhost:3000/api/hotels/1731479202985
 ```
 #### GET Hotel Data by by slug
 
 ```bash
-- curl http://localhost:3000/api/hotels/slug/ocean-breeze-resort
+curl http://localhost:3000/api/hotels/slug/ocean-breeze-resort
 ```
 
 #### PUT Hotel Data by Unique-ID
 
 ```bash
-- curl -X PUT http://localhost:3000/api/hotels/1731416516744 \
+curl -X PUT http://localhost:3000/api/hotels/1731416516744 \
   -H "Content-Type: application/json" \
   -d '{
     "title": "Grand Plaza Hotel & Suites",
@@ -203,7 +203,7 @@ Follow these instructions to set up the project locally for development and test
 #### Post Hotel Images
 
 ```bash
-  - curl -X POST http://localhost:3000/api/hotels/1731479202985/images \
+  curl -X POST http://localhost:3000/api/hotels/1731479202985/images \
   -F "images=@/home/w3e60/Documents/w3_assignment1/images/img1.jpg" \
   -F "images=@/home/w3e60/Documents/w3_assignment1/images/img2.jpg" \
   -F "images=@/home/w3e60/Documents/w3_assignment1/images/img3.jpg" \
@@ -212,7 +212,7 @@ Follow these instructions to set up the project locally for development and test
 ```
 #### Post Room Details in Hotel Data
 ```bash
-- curl -X POST http://localhost:3000/api/hotels/ocean-breeze-resort/rooms \
+curl -X POST http://localhost:3000/api/hotels/ocean-breeze-resort/rooms \
   -H "Content-Type: application/json" \
   -d '{
     "roomTitle": "Deluxe Suite",
@@ -222,7 +222,7 @@ Follow these instructions to set up the project locally for development and test
 
 #### Post Room Image
 ```bash
-  - curl -X POST http://localhost:3000/api/hotels/ocean-breeze-resort/rooms/deluxe-suite/image  
+  curl -X POST http://localhost:3000/api/hotels/ocean-breeze-resort/rooms/deluxe-suite/image  
    -F "image=@/home/w3e60/Documents/w3_assignment1/images/img1.jpg"
 ```
 
