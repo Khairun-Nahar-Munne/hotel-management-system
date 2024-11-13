@@ -110,7 +110,7 @@ Follow these instructions to set up the project locally for development and test
 - npm test
 ```
 
-#### Run Esint:
+#### Run Eslint:
 ```bash
 - npx eslint .
 ```
