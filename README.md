@@ -1,4 +1,3 @@
-
 # Hotel Management API
 
 A RESTful API built with Node.js, Express.js, and TypeScript for managing hotel information.

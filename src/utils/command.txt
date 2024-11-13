@@ -1,5 +1,6 @@
+test command using curl
 
-//post
+# post
 
 curl -X POST http://localhost:3000/api/hotels \
   -H "Content-Type: application/json" \
@@ -29,10 +30,10 @@ curl -X POST http://localhost:3000/api/hotels \
   }'
 
 # Get by ID
-curl http://localhost:3000/api/hotel/1699840000000
+curl http://localhost:3000/api/hotels/1731479202985
 
 # Get by slug
-curl http://localhost:3000/api/hotels/slug/mountain-view-hotel
+curl http://localhost:3000/api/hotels/slug/ocean-breeze-resort
 
 #put by ID
 
@@ -71,16 +72,25 @@ curl -X PUT http://localhost:3000/api/hotels/1731416516744 \
       "longitude": -74.0060
     }
   }'
-+
 
 
-//for post images
-      curl -X POST http://localhost:3000/api/hotels/1731414488981/images \
+
+# for post images
+
+
+      curl -X POST http://localhost:3000/api/hotels/1731479202985/images \
   -F "images=@/home/w3e60/Documents/w3_assignment1/images/img1.jpg" \
   -F "images=@/home/w3e60/Documents/w3_assignment1/images/img2.jpg" \
   -F "images=@/home/w3e60/Documents/w3_assignment1/images/img3.jpg" \
   -F "images=@/home/w3e60/Documents/w3_assignment1/images/img4.jpg"
 
+# for post room details in hotel room
+curl -X POST http://localhost:3000/api/hotels/ocean-breeze-resort/rooms \
+  -H "Content-Type: application/json" \
+  -d '{
+    "roomTitle": "Deluxe Suite",
+    "bedroomCount": 1
+  }'
 
-  //for upload room image:
-  curl -X POST http://localhost:3000/api/hotels/sample-hotel/rooms/deluxe-suite/image   -F "image=@//home/w3e60/Docusignment1/images/img1.jpg"
+# for upload room image:
+  curl -X POST http://localhost:3000/api/hotels/ocean-breeze-resort/rooms/deluxe-suite/image   -F "image=@/home/w3e60/Documents/w3_assignment1/images/img1.jpg"

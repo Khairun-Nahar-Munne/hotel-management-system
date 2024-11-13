@@ -1,0 +1,47 @@
+{
+  "title": "Ocean Breeze Resort",
+  "description": "A beachfront resort offering serene ocean views and luxury accommodations",
+  "guestCount": 4,
+  "bedroomCount": 2,
+  "bathroomCount": 2,
+  "amenities": [
+    "beach access",
+    "bar",
+    "spa",
+    "fitness center",
+    "restaurant"
+  ],
+  "host": {
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "phone": "123-456-7890"
+  },
+  "address": {
+    "street": "123 Seaside Blvd",
+    "city": "Beach Town",
+    "state": "Coastal State",
+    "country": "Tropical Land",
+    "zipCode": "12345"
+  },
+  "location": {
+    "latitude": 25.67,
+    "longitude": 79.12
+  },
+  "id": "1731479202985",
+  "slug": "ocean-breeze-resort",
+  "images": [
+    "/uploads/images/1731479367698.jpg",
+    "/uploads/images/1731479367701.jpg",
+    "/uploads/images/1731479367704.jpg",
+    "/uploads/images/1731479367707.jpg"
+  ],
+  "rooms": [
+    {
+      "roomTitle": "Deluxe Suite",
+      "bedroomCount": 1,
+      "hotelSlug": "ocean-breeze-resort",
+      "roomSlug": "deluxe-suite",
+      "roomImage": "/uploads/images/1731479794126.jpg"
+    }
+  ]
+}

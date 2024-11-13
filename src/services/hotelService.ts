@@ -3,19 +3,28 @@ import path from 'path';
 import slugify from 'slugify';
 import { Hotel, Room } from '../models/types';
 
+// Define custom error type
+interface FileSystemError extends Error {
+  code?: string;
+}
+
 export class HotelService {
   private readonly databasePath: string;
+  private readonly isTestEnvironment: boolean;
 
   constructor() {
     this.databasePath = path.join(__dirname, '..', 'database', 'hotels');
+    this.isTestEnvironment = process.env.NODE_ENV === 'test';
     this.initializeDatabase();
   }
 
   private async initializeDatabase() {
     try {
       await fs.mkdir(this.databasePath, { recursive: true });
-    } catch (error) {
-      console.error('Failed to create database directory:', error);
+    } catch (error: unknown) {
+      if (!this.isTestEnvironment && error instanceof Error) {
+        console.error('Failed to create database directory:', error.message);
+      }
     }
   }
 
@@ -37,8 +46,10 @@ export class HotelService {
         JSON.stringify(hotel, null, 2)
       );
       return hotel;
-    } catch (error) {
-      console.error('Error creating hotel:', error);
+    } catch (error: unknown) {
+      if (!this.isTestEnvironment && error instanceof Error) {
+        console.error('Error creating hotel:', error.message);
+      }
       throw error;
     }
   }
@@ -48,8 +59,11 @@ export class HotelService {
       const filePath = path.join(this.databasePath, `${hotelId}.json`);
       const data = await fs.readFile(filePath, 'utf-8');
       return JSON.parse(data);
-    } catch (error) {
-      console.error(`Error reading hotel ${hotelId}:`, error);
+    } catch (error: unknown) {
+      const fsError = error as FileSystemError;
+      if (!this.isTestEnvironment && fsError.code !== 'ENOENT') {
+        console.error(`Error reading hotel ${hotelId}:`, fsError.message);
+      }
       return null;
     }
   }
@@ -69,8 +83,10 @@ export class HotelService {
       }
       
       return null;
-    } catch (error) {
-      console.error(`Error finding hotel by slug ${slug}:`, error);
+    } catch (error: unknown) {
+      if (!this.isTestEnvironment && error instanceof Error) {
+        console.error(`Error finding hotel by slug ${slug}:`, error.message);
+      }
       return null;
     }
   }
@@ -88,8 +104,10 @@ export class HotelService {
       );
 
       return updatedHotel;
-    } catch (error) {
-      console.error(`Error updating hotel ${hotelId}:`, error);
+    } catch (error: unknown) {
+      if (!this.isTestEnvironment && error instanceof Error) {
+        console.error(`Error updating hotel ${hotelId}:`, error.message);
+      }
       throw error;
     }
   }
@@ -119,8 +137,10 @@ export class HotelService {
       );
 
       return hotel;
-    } catch (error) {
-      console.error(`Error adding room to hotel ${hotelSlug}:`, error);
+    } catch (error: unknown) {
+      if (!this.isTestEnvironment && error instanceof Error) {
+        console.error(`Error adding room to hotel ${hotelSlug}:`, error.message);
+      }
       throw error;
     }
   }
@@ -141,8 +161,10 @@ export class HotelService {
       );
 
       return hotel;
-    } catch (error) {
-      console.error(`Error updating room image for ${hotelSlug}/${roomSlug}:`, error);
+    } catch (error: unknown) {
+      if (!this.isTestEnvironment && error instanceof Error) {
+        console.error(`Error updating room image for ${hotelSlug}/${roomSlug}:`, error.message);
+      }
       throw error;
     }
   }
